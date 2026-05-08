@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Практичні інструменти, калькулятори та чеклісти для будівництва і ремонту."
+    >
+    <title>Builder Tools</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="./assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-logo" href="./index.html" aria-label="Builder Tools home">
+        Builder Tools
+      </a>
+
+      <nav class="site-nav" aria-label="Головна навігація">
+        <a href="#tools">Інструменти</a>
+        <a href="#guides">Гайди</a>
+        <a href="#checklists">Чеклісти</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <p class="eyebrow">Для ремонту, будівництва та планування</p>
+          <h1 id="hero-title">Корисні будівельні інструменти в одному місці</h1>
+          <p>
+            Калькулятори матеріалів, чеклісти робіт і прості гайди, які
+            допомагають швидше планувати ремонт без зайвої плутанини.
+          </p>
+          <a class="button" href="#tools">Переглянути інструменти</a>
+        </div>
+      </section>
+
+      <section class="section" id="tools" aria-labelledby="tools-title">
+        <div class="section__header">
+          <p class="eyebrow">Перший набір</p>
+          <h2 id="tools-title">Інструменти</h2>
+        </div>
+
+        <div class="tool-grid">
+          <article class="tool-card">
+            <h3>Калькулятор фарби</h3>
+            <p>Оціни кількість фарби для стін або стелі.</p>
+            <a href="./src/pages/paint-calculator.html">Відкрити</a>
+          </article>
+
+          <article class="tool-card">
+            <h3>Калькулятор плитки</h3>
+            <p>Порахуй площу, запас і приблизну кількість плитки.</p>
+            <a href="./src/pages/tile-calculator.html">Відкрити</a>
+          </article>
+
+          <article class="tool-card">
+            <h3>Бюджет ремонту</h3>
+            <p>Збери базовий кошторис по матеріалах і роботах.</p>
+            <a href="./src/pages/renovation-budget.html">Відкрити</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--muted" id="guides" aria-labelledby="guides-title">
+        <div class="section__header">
+          <p class="eyebrow">Контент для CMS</p>
+          <h2 id="guides-title">Гайди та статті</h2>
+        </div>
+        <p class="section__text">
+          Тут пізніше будуть матеріали з WordPress: поради, покрокові інструкції,
+          порівняння матеріалів і відповіді на часті питання.
+        </p>
+      </section>
+
+      <section class="section" id="checklists" aria-labelledby="checklists-title">
+        <div class="section__header">
+          <p class="eyebrow">Для контролю процесу</p>
+          <h2 id="checklists-title">Чеклісти</h2>
+        </div>
+        <p class="section__text">
+          Окремий розділ для підготовки до ремонту, закупівель, приймання робіт
+          і фінального огляду.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Builder Tools. Frontend foundation.</p>
+    </footer>
+  </body>
+</html>
