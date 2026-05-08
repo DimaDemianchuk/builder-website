@@ -1,47 +1,19 @@
-:root {
-  --color-bg: #f7f4ee;
-  --color-surface: #ffffff;
-  --color-text: #20201d;
-  --color-muted: #68655f;
-  --color-border: #ddd6ca;
-  --color-accent: #2f6b4f;
-  --color-accent-strong: #25543e;
-  --shadow-soft: 0 16px 44px rgba(52, 48, 40, 0.12);
-  --container: 1120px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-}
-
-a {
-  color: inherit;
-}
+@import url("./design-system.css");
 
 .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: var(--gap-md);
   max-width: var(--container);
   margin: 0 auto;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .site-logo {
-  font-size: 20px;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
   font-weight: 700;
   text-decoration: none;
 }
@@ -49,104 +21,46 @@ a {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 18px;
-  color: var(--color-muted);
-  font-size: 15px;
-}
-
-.site-nav a {
-  text-decoration: none;
-}
-
-.site-nav a:hover {
-  color: var(--color-text);
+  gap: 1.125rem;
+  font-size: 0.9375rem;
 }
 
 .hero {
-  min-height: 520px;
+  min-height: 32.5rem;
   display: grid;
   align-items: center;
   max-width: var(--container);
   margin: 0 auto;
-  padding: 64px 20px 88px;
+  padding: 4rem var(--container-padding-x) 5.5rem;
 }
 
 .hero__content {
-  max-width: 720px;
+  max-width: 45rem;
 }
 
 .eyebrow {
-  margin: 0 0 10px;
-  color: var(--color-accent);
-  font-size: 13px;
+  margin: 0 0 0.625rem;
+  color: var(--color-text-secondary);
+  font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0;
   text-transform: uppercase;
 }
 
-h1,
-h2,
-h3,
-p {
-  overflow-wrap: anywhere;
-}
-
-h1 {
-  max-width: 760px;
-  margin: 0 0 20px;
-  font-size: 72px;
-  line-height: 0.95;
-  letter-spacing: 0;
-}
-
-h2 {
-  margin: 0;
-  font-size: 34px;
-  line-height: 1.1;
-  letter-spacing: 0;
-}
-
-h3 {
-  margin: 0 0 10px;
-  font-size: 20px;
-  line-height: 1.2;
-}
-
 .hero p:not(.eyebrow),
 .section__text {
-  max-width: 680px;
+  max-width: 42.5rem;
   margin: 0;
-  color: var(--color-muted);
-  font-size: 18px;
+  color: var(--color-text-secondary);
 }
 
 .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  margin-top: 28px;
-  padding: 0 20px;
-  border-radius: 6px;
-  background: var(--color-accent);
-  color: #ffffff;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.button:hover {
-  background: var(--color-accent-strong);
-}
-
-.section {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 72px 20px;
+  margin-top: 1.75rem;
 }
 
 .section--muted {
   max-width: none;
-  background: #ece6da;
+  background: #dedede;
 }
 
 .section--muted > * {
@@ -156,52 +70,52 @@ h3 {
 }
 
 .section__header {
-  margin-bottom: 26px;
+  margin-bottom: 1.625rem;
 }
 
 .tool-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: var(--gap-md);
 }
 
 .tool-card {
-  min-height: 190px;
-  padding: 24px;
+  min-height: 11.875rem;
+  padding: 1.5rem;
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background: var(--color-surface);
   box-shadow: var(--shadow-soft);
 }
 
 .tool-card p {
-  margin: 0 0 24px;
-  color: var(--color-muted);
+  margin: 0 0 1.5rem;
+  color: var(--color-text-secondary);
 }
 
 .tool-card a {
-  color: var(--color-accent);
+  color: var(--color-primary);
   font-weight: 700;
   text-decoration: none;
 }
 
 .tool-card a:hover {
-  color: var(--color-accent-strong);
+  color: rgba(43, 43, 43, 0.7);
 }
 
 .site-footer {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 32px 20px;
-  color: var(--color-muted);
-  font-size: 14px;
+  padding: 2rem var(--container-padding-x);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
 }
 
 .site-footer p {
   margin: 0;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .site-header {
     align-items: flex-start;
     flex-direction: column;
@@ -213,12 +127,8 @@ h3 {
 
   .hero {
     min-height: auto;
-    padding-top: 44px;
-    padding-bottom: 64px;
-  }
-
-  h1 {
-    font-size: 42px;
+    padding-top: 2.75rem;
+    padding-bottom: 4rem;
   }
 
   .tool-grid {
