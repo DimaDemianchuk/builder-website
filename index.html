@@ -9,27 +9,43 @@
     >
     <title>Builder Tools</title>
     <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="./assets/js/calculator-definitions.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
   </head>
   <body>
     <header class="site-header">
-      <a class="site-logo" href="./index.html" aria-label="Builder Tools home">
-        Builder Tools
-      </a>
+      <div class="nav-content--wrap">
+        <a class="site-logo" href="./index.html" aria-label="Builder Tools home">
+          Builder Tools
+        </a>
 
-      <nav class="site-nav" aria-label="Головна навігація">
-        <a href="#tools">Інструменти</a>
-        <a href="#guides">Гайди</a>
-        <a href="#checklists">Чеклісти</a>
-      </nav>
+        <nav class="site-nav" aria-label="Головна навігація">
+          <a href="./index.html" aria-current="page">Головна</a>
+          <div class="nav-dropdown" data-dropdown>
+            <button class="nav-dropdown__toggle" type="button" aria-expanded="false" data-dropdown-toggle>
+              Калькулятори
+            </button>
+            <div class="nav-dropdown__panel" data-dropdown-panel>
+              <a class="nav-dropdown__link" href="./src/pages/paint-calculator.html" data-calculator-popup="plaster">Розрахунок штукатурних матеріалів</a>
+              <a class="nav-dropdown__link" href="./src/pages/tile-calculator.html" data-calculator-popup="concrete">Розрахунок бетонних матеріалів</a>
+              <a class="nav-dropdown__link" href="./src/pages/paint-calculator.html" data-calculator-popup="paint">Розрахунок малярних матеріалів</a>
+              <a class="nav-dropdown__link" href="./src/pages/renovation-budget.html" data-calculator-popup="electrical">Розрахунок електричних матеріалів</a>
+              <a class="nav-dropdown__link" href="./src/pages/tile-calculator.html" data-calculator-popup="tile">Розрахунок плитки</a>
+            </div>
+          </div>
+          <a href="./src/pages/renovation-budget.html">Кошторис</a>
+          <a href="#tables">Таблиці</a>
+          <a href="#guides">Довідник</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
+      <section class="hero">
         <div class="hero__content">
-          <p class="eyebrow">Для ремонту, будівництва та планування</p>
-          <h1 id="hero-title">Корисні будівельні інструменти в одному місці</h1>
-          <p>
+          <p class="subtext">Для ремонту, будівництва та планування</p>
+          <h1>Корисні будівельні інструменти в одному місці</h1>
+          <p class="subtext">
             Калькулятори матеріалів, чеклісти робіт і прості гайди, які
             допомагають швидше планувати ремонт без зайвої плутанини.
           </p>
@@ -37,58 +53,155 @@
         </div>
       </section>
 
-      <section class="section" id="tools" aria-labelledby="tools-title">
+      <section class="section" id="tools">
         <div class="section__header">
-          <p class="eyebrow">Перший набір</p>
-          <h2 id="tools-title">Інструменти</h2>
+          <h2 class="h4">Калькулятори</h2>
         </div>
 
-        <div class="tool-grid">
-          <article class="tool-card">
-            <h3>Калькулятор фарби</h3>
-            <p>Оціни кількість фарби для стін або стелі.</p>
-            <a href="./src/pages/paint-calculator.html">Відкрити</a>
-          </article>
+        <div class="calculator-link-grid">
+          <a class="calculator-link" href="./src/pages/paint-calculator.html" data-calculator-popup="plaster">
+            <span class="calculator-icon calculator-icon--plaster"></span>
+            <span>Розрахунок штукатурних матеріалів</span>
+          </a>
 
-          <article class="tool-card">
-            <h3>Калькулятор плитки</h3>
-            <p>Порахуй площу, запас і приблизну кількість плитки.</p>
-            <a href="./src/pages/tile-calculator.html">Відкрити</a>
-          </article>
+          <a class="calculator-link" href="./src/pages/tile-calculator.html" data-calculator-popup="concrete">
+            <span class="calculator-icon calculator-icon--concrete"></span>
+            <span>Розрахунок бетонних матеріалів</span>
+          </a>
 
-          <article class="tool-card">
-            <h3>Бюджет ремонту</h3>
-            <p>Збери базовий кошторис по матеріалах і роботах.</p>
-            <a href="./src/pages/renovation-budget.html">Відкрити</a>
-          </article>
+          <a class="calculator-link" href="./src/pages/paint-calculator.html" data-calculator-popup="paint">
+            <span class="calculator-icon calculator-icon--paint"></span>
+            <span>Розрахунок малярних матеріалів</span>
+          </a>
+
+          <a class="calculator-link" href="./src/pages/renovation-budget.html" data-calculator-popup="electrical">
+            <span class="calculator-icon calculator-icon--electrical"></span>
+            <span>Розрахунок електричних матеріалів</span>
+          </a>
+
+          <a class="calculator-link" href="./src/pages/tile-calculator.html" data-calculator-popup="tile">
+            <span class="calculator-icon calculator-icon--tile"></span>
+            <span>Розрахунок плитки</span>
+          </a>
         </div>
       </section>
 
-      <section class="section section--muted" id="guides" aria-labelledby="guides-title">
-        <div class="section__header">
-          <p class="eyebrow">Контент для CMS</p>
-          <h2 id="guides-title">Гайди та статті</h2>
+      <section class="section" id="tables">
+        <div class="section-content--split">
+          <div>
+            <h2 class="h4">Створити таблицю</h2>
+            <p class="section__text subtext">
+              Збери просту таблицю матеріалів, робіт або закупівель для ремонту.
+              Почни з шаблону, додай рядки й підготуй дані для друку або експорту.
+            </p>
+            <a class="button" href="./src/pages/table-builder.html">Створити таблицю</a>
+          </div>
+
+          <div class="section-preview section-preview--table" aria-hidden="true">
+            <div class="preview-table__row preview-table__row--head">
+              <span>Матеріал</span>
+              <span>К-сть</span>
+              <span>Сума</span>
+            </div>
+            <div class="preview-table__row">
+              <span>Фарба</span>
+              <span>8 л</span>
+              <span>2400</span>
+            </div>
+            <div class="preview-table__row">
+              <span>Клей</span>
+              <span>4 міш.</span>
+              <span>1800</span>
+            </div>
+            <div class="preview-table__row">
+              <span>Плитка</span>
+              <span>12 м²</span>
+              <span>9600</span>
+            </div>
+          </div>
         </div>
-        <p class="section__text">
-          Тут пізніше будуть матеріали з WordPress: поради, покрокові інструкції,
-          порівняння матеріалів і відповіді на часті питання.
-        </p>
       </section>
 
-      <section class="section" id="checklists" aria-labelledby="checklists-title">
-        <div class="section__header">
-          <p class="eyebrow">Для контролю процесу</p>
-          <h2 id="checklists-title">Чеклісти</h2>
+      <section class="section" id="business-card">
+        <div class="section-content--split">
+          <div>
+            <h2 class="h4">Створити візитівку</h2>
+            <p class="section__text subtext">
+              Зроби коротку візитівку майстра, бригади або компанії: контакти,
+              спеціалізація, місто та перелік послуг в одному акуратному блоці.
+            </p>
+            <a class="button" href="./src/pages/business-card-builder.html">Створити візитівку</a>
+          </div>
+
+          <div class="section-preview section-preview--card" aria-hidden="true">
+            <div class="preview-card__mark">BT</div>
+            <div>
+              <strong>Майстер ремонту</strong>
+              <span>Плитка · Малярні роботи · Електрика</span>
+            </div>
+            <div class="preview-card__line"></div>
+            <span>+380 00 000 00 00</span>
+          </div>
         </div>
-        <p class="section__text">
-          Окремий розділ для підготовки до ремонту, закупівель, приймання робіт
-          і фінального огляду.
-        </p>
+      </section>
+
+      <section class="section" id="website-development">
+        <div class="section-content--split">
+          <div>
+            <h2 class="h4">Створення веб сайтів</h2>
+            <p class="section__text subtext">
+              Я розробляю прості та зрозумілі сайти для майстрів, бригад і малого бізнесу.
+              Деталі, бюджет і структуру проекту можна обговорити в месенджері.
+            </p>
+            <a class="button" href="#website-development">Обговорити проект</a>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contacts">
+        <div class="contact-section__content">
+          <div>
+            <h2 class="h4">Контакти</h2>
+            <p class="section__text subtext">
+              Напиши, якщо хочеш обговорити сайт, інструмент для розрахунків або ідею для будівельного сервісу.
+            </p>
+          </div>
+
+          <div class="contact-list">
+            <a href="mailto:hello@example.com">hello@example.com</a>
+            <a href="tel:+380000000000">+380 00 000 00 00</a>
+            <a href="#contacts">Telegram / Viber</a>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Builder Tools. Frontend foundation.</p>
+      <div class="site-footer__content">
+        <div>
+          <a class="site-footer__logo" href="./index.html">Builder Tools</a>
+          <p class="subtext">Інструменти для планування ремонту, матеріалів і робіт.</p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Навігація у футері">
+          <a href="./index.html">Головна</a>
+          <a href="#tools">Калькулятори</a>
+          <a href="#tables">Таблиці</a>
+          <a href="#contacts">Контакти</a>
+        </nav>
+      </div>
     </footer>
+
+    <div class="calculator-popup" data-calculator-modal aria-hidden="true">
+      <div class="calculator-popup__overlay" data-calculator-close></div>
+      <section class="calculator-popup__dialog" role="dialog" aria-modal="true">
+        <button class="calculator-popup__close" type="button" aria-label="Закрити" data-calculator-close></button>
+        <p class="calculator-popup__eyebrow subtext" data-calculator-eyebrow></p>
+        <h2 class="calculator-popup__title" data-calculator-title></h2>
+        <p class="calculator-popup__description subtext" data-calculator-description></p>
+        <div class="calculator-popup__content" data-calculator-content></div>
+      </section>
+    </div>
   </body>
 </html>

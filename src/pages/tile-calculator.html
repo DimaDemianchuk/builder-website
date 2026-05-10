@@ -5,26 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Калькулятор плитки | Builder Tools</title>
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <script src="../../assets/js/calculator-definitions.js" defer></script>
     <script src="../../assets/js/main.js" defer></script>
   </head>
   <body>
     <header class="site-header">
-      <a class="site-logo" href="../../index.html">Builder Tools</a>
-      <nav class="site-nav" aria-label="Головна навігація">
-        <a href="../../index.html#tools">Інструменти</a>
-        <a href="../../index.html#guides">Гайди</a>
-        <a href="../../index.html#checklists">Чеклісти</a>
-      </nav>
+      <div class="nav-content--wrap">
+        <a class="site-logo" href="../../index.html">Builder Tools</a>
+        <nav class="site-nav" aria-label="Головна навігація">
+          <a href="../../index.html">Головна</a>
+          <div class="nav-dropdown" data-dropdown>
+            <button class="nav-dropdown__toggle" type="button" aria-expanded="false" data-dropdown-toggle>
+              Калькулятори
+            </button>
+            <div class="nav-dropdown__panel" data-dropdown-panel>
+              <a class="nav-dropdown__link" href="./paint-calculator.html" data-calculator-popup="plaster">Розрахунок штукатурних матеріалів</a>
+              <a class="nav-dropdown__link" href="./tile-calculator.html" data-calculator-popup="concrete">Розрахунок бетонних матеріалів</a>
+              <a class="nav-dropdown__link" href="./paint-calculator.html" data-calculator-popup="paint">Розрахунок малярних матеріалів</a>
+              <a class="nav-dropdown__link" href="./renovation-budget.html" data-calculator-popup="electrical">Розрахунок електричних матеріалів</a>
+              <a class="nav-dropdown__link" href="./tile-calculator.html" data-calculator-popup="tile">Розрахунок плитки</a>
+            </div>
+          </div>
+          <a href="./renovation-budget.html">Кошторис</a>
+          <a href="../../index.html#checklists">Таблиці</a>
+          <a href="../../index.html#guides">Довідник</a>
+        </nav>
+      </div>
     </header>
 
     <main class="section">
       <div class="section__header">
-        <p class="eyebrow">Calculator</p>
+        <p class="subtext">Calculator</p>
         <h1>Калькулятор плитки</h1>
       </div>
-      <p class="section__text">
+      <p class="section__text subtext">
         Тут буде форма для площі, розміру плитки, шва, запасу та типу укладки.
       </p>
     </main>
+
+    <div class="calculator-popup" data-calculator-modal aria-hidden="true">
+      <div class="calculator-popup__overlay" data-calculator-close></div>
+      <section class="calculator-popup__dialog" role="dialog" aria-modal="true">
+        <button class="calculator-popup__close" type="button" aria-label="Закрити" data-calculator-close></button>
+        <p class="calculator-popup__eyebrow subtext" data-calculator-eyebrow></p>
+        <h2 class="calculator-popup__title" data-calculator-title></h2>
+        <p class="calculator-popup__description subtext" data-calculator-description></p>
+        <div class="calculator-popup__content" data-calculator-content></div>
+      </section>
+    </div>
   </body>
 </html>
