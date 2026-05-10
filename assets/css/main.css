@@ -340,10 +340,6 @@ body.has-modal-open {
   margin-top: 1.5rem;
 }
 
-#website-development {
-  padding-bottom: var(--section-padding-y);
-}
-
 .section-preview {
   min-height: 16rem;
   padding: 1.25rem;
