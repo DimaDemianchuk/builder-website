@@ -120,9 +120,7 @@ h4,
 }
 
 .section {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: var(--section-padding-y) var(--container-padding-x);
+  padding: var(--section-padding-y) 0;
 }
 
 .content-wrapper {
