@@ -684,7 +684,7 @@ select.calculator-field__input {
 .site-footer {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 4rem var(--container-padding-x) 2rem;
+  padding: 1rem var(--container-padding-x) 2rem;
   background: var(--color-surface);
   color: var(--color-text-secondary);
   font-size: 0.875rem;
